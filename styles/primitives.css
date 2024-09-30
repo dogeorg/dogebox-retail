@@ -29,6 +29,7 @@ body {
   --color-gold-dark: #a7782d;
 
   --color-panel-gradient: linear-gradient(to bottom, #18191e, #18191d);
+  --color-panel-gradient-highlight: linear-gradient(to bottom, #24262e, #24262d);
 
 }
 

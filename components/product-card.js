@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '/vendor/@lit/all@3.1.2/lit-all.min.js';
+import { LitElement, html, css, nothing } from '/vendor/@lit/all@3.1.2/lit-all.min.js';
 
 class ProductCard extends LitElement {
   static styles = css`
@@ -193,11 +193,13 @@ class ProductCard extends LitElement {
         <div class="detail">
           ${this.desc}
         </div>
-        <div class="pricing">
-          <span class="currency">Ð</span>
-          <span class="val">${this.price}</span>
-          <span class="tag">dogecoin</span>
-        </div>
+        ${this.price ? html`
+          <div class="pricing">
+            <span class="currency">Ð</span>
+            <span class="val">${this.price}</span>
+            <span class="tag">dogecoin</span>
+          </div>
+        `: nothing }
         <div class="footer-action">
           <button class="button large outline ${this.theme}">Limited supply</button>
         </div>
