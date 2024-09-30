@@ -61,6 +61,10 @@
   grid-template-rows: repeat(2, 1fr);
   gap: 1em;
 
+  a.no-deco { 
+    text-decoration: none;
+  }
+
   div.grid-item {
     display: flex;
     flex-direction: column;
@@ -68,7 +72,15 @@
     gap: 1em;
     color: white;
     background: var(--color-panel-gradient);
-    height: 200px;
+    max-height: 320px;
+    text-decoration: none;
+
+    img { width: 80%; }
+
+    &:hover {
+      cursor: pointer;
+      background: var(--color-panel-gradient-highlight);
+    }
 
     span.option {
       margin-top: 1.5em;
@@ -85,8 +97,17 @@
     }
 
     span.title {
+      padding: 10px;
+      background: #ffc107;
+      color: black;
       font-family: 'Montserrat';
       font-weight: 600;
+      align-self: flex-start;
+      width: 100%;
+      box-sizing: border-box;
+      @media (min-width: 576px) {
+        width: auto;
+      }
     }
 
     span.subtitle {
@@ -110,7 +131,7 @@
 
   @media (min-width: 720px) {}
 
-  article { text-align: justify; }
+  article { text-align: left; }
   article { max-width: 360px; }
   article { display: none; }
   article.active { display: block; }
