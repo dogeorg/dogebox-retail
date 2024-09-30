@@ -1,0 +1,34 @@
+{
+  "manifestVersion": 1,
+  "meta": {
+    "name": "dogebox-retail",
+    "version": "0.0.1",
+    "logoPath": "",
+    "shortDescription": "The dogebox.dogecoin.com website as a pup",
+    "longDescription": "",
+    "upstreamVersions": null
+  },
+  "config": {
+    "sections": null
+  },
+  "container": {
+    "build": {
+      "nixFile": "pup.nix",
+      "nixFileSha256": "7bd36b6bd91091bffda63aefd442c453ce6e4c22b3f29dbe6debb963e8b3c3db"
+    },
+    "services": [],
+    "exposes": [
+      {
+        "name": "public",
+        "type": "http",
+        "port": 8090,
+        "interfaces": null,
+        "listenOnHost": true
+      }
+    ],
+    "requiresInternet": false
+  },
+  "interfaces": null,
+  "dependencies": null,
+  "metrics": null
+}
