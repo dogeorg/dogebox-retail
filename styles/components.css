@@ -125,14 +125,15 @@
 #ArticleRange {
   display: flex;
   flex-direction: row;
-  max-width: 360px;
+  padding: 0 3em;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 
   @media (min-width: 720px) {}
 
   article { text-align: left; }
-  article { max-width: 360px; }
+  article { max-width: 720px; }
   article { display: none; }
   article.active { display: block; }
 }
