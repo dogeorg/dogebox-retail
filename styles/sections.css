@@ -1,3 +1,9 @@
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 section:first-of-type {
   margin-top: 1em;
   @media (min-width: 576px) {
@@ -69,6 +75,36 @@ section.walled aside {
 .bg2 aside { background-image: url("../img/3B.JPG"); background-size: cover; background-position: bottom; }
 .bg3 aside { background-image: url("../img/4A.JPG"); background-size: cover; }
 .bg4 aside { background-image: url("../img/5.JPG"); backgrou-size: cover; background-position: bottom; }
+
+.bg1 aside img#subject {
+  position: relative;
+  bottom: 15px;
+  animation: breathe 4s ease-in-out infinite;
+  width: 35%;
+  --translate-y-distance: -15px;
+  @media (min-width: 576px) {
+    width: auto;
+    bottom: 35px;
+    --translate-y-distance: -30px;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(var(--translate-y-distance));
+  }
+  35% {
+    transform: translateY(var(--translate-y-distance));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 
 section.walled.reverse {
   flex-direction: row-reverse;
