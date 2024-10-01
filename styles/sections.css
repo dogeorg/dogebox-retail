@@ -74,7 +74,7 @@ section.walled aside {
 .bg1 aside { background-image: url("../img/2.JPG"); background-size: cover; background-position: bottom; }
 .bg2 aside { background-image: url("../img/3B.JPG"); background-size: cover; background-position: bottom; }
 .bg3 aside { background-image: url("../img/4A.JPG"); background-size: cover; }
-.bg4 aside { background-image: url("../img/5.JPG"); backgrou-size: cover; background-position: bottom; }
+.bg4 aside { background-image: url("../img/5.JPG"); background-size: cover; background-position: bottom; }
 
 .bg1 aside img#subject {
   position: relative;
@@ -88,6 +88,17 @@ section.walled aside {
     --translate-y-distance: -30px;
   }
 }
+
+/*.bg2 aside span#D {
+  font-size: 153px;
+  color: #362309;
+  position: relative;
+  left: 271px;
+  bottom: 50px;
+  font-family: Montserrat;
+  font-weight: bold;
+  transform: rotate(-35deg) skew(21deg, 0); transform-origin: bottom left;
+}*/
 
 @keyframes breathe {
   0% {
