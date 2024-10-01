@@ -74,7 +74,35 @@ section.walled aside {
 .bg1 aside { background-image: url("../img/2.JPG"); background-size: cover; background-position: bottom; }
 .bg2 aside { background-image: url("../img/3B.JPG"); background-size: cover; background-position: bottom; }
 .bg3 aside { background-image: url("../img/4A.JPG"); background-size: cover; }
-.bg4 aside { background-image: url("../img/5.JPG"); background-size: cover; background-position: bottom; }
+.bg4 aside { opacity: 0.65 !important; background-image: url("../img/5.JPG"); background-size: cover; background-position: bottom; z-index:1; }
+.bg4 div#BuildUnder {
+  display: none;
+  position: absolute;
+  width: 203px;
+  height: 446px;
+  background: yellow;
+  top: 218px;
+  left: 209px;
+  border-radius: 20px;
+  z-index: -2;
+  transform: perspective(485px) rotateY(4deg);
+  background: url("/img/mobile.png");
+  background-size: 97% 100%;
+}
+.bg4 div#BuildUnder2 {
+  display: none;
+  position: absolute;
+  width: 519px;
+  height: 359px;
+  background: yellow;
+  top: 141px;
+  left: 393px;
+  border-radius: 20px;
+  z-index: -3;
+  transform: perspective(555px) rotateY(7deg);
+  background: url("/img/desktop.png");
+  background-size: 97% 100%;
+}
 
 .bg1 aside img#subject {
   position: relative;
