@@ -1,3 +1,17 @@
+.primary-button-group {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  gap: 1em;
+
+  a {
+    width: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    white-space: nowrap;
+  }
+}
+
 .picker {
   display: flex;
   flex-direction: row;
@@ -37,6 +51,31 @@
   transition: transform 300ms ease;
 }
 
+#ComingSoonBanner.sticky-tape {
+  position: absolute;
+  bottom: 200px;
+  opacity: 0.85;
+  left: 0px;
+  width: 100%;
+  height: 115px;
+  background: #bb51e1;
+  transform: rotate(-3deg) translateX(-0%);
+  z-index: 98;
+  font-size: 2em;
+  color: black;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 576px) {
+    font-size: 3em;
+    width: 120%;
+    transform: rotate(-3deg) translateX(-10%);
+  }
+}
+
 #ProductRange {
   display: flex;
   position: relative;
@@ -65,6 +104,21 @@
     text-decoration: none;
   }
 
+  a.no-deco:hover {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+  }
+
+  a.no-deco:hover .grid-item .title {
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
+
+  a.no-deco:hover .grid-item .subtitle {
+    text-decoration: underline;
+    text-decoration-color: white;
+  }
+
   div.grid-item {
     display: flex;
     flex-direction: column;
@@ -73,7 +127,6 @@
     color: white;
     background: var(--color-panel-gradient);
     max-height: 320px;
-    text-decoration: none;
 
     img { width: 80%; }
 
@@ -108,6 +161,18 @@
       @media (min-width: 576px) {
         width: auto;
       }
+    }
+
+    span.title::after {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: 1px;
+      margin-left: 7px;
+      background: url("/img/ext.png");
+      background-size: contain;
+      width: 14px;
+      height: 14px;
     }
 
     span.subtitle {
