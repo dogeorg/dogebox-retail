@@ -23,6 +23,15 @@
     <link rel="preload" href="img/4C.JPG" as="image">
   </head>
   <body>
+
+    <div id="TopAlert" class="top-alert appear">
+      <div class="inner">
+        <a href="#images-and-virtual-machines" class="statement">Run Dogebox on your own hardware today! <span class="alert-link">Let's go</span> 🚀</a>
+        <a href="#pre-order" class="statement">Hardware <strong>pre-orders</strong> opening soon 🙌</a>
+        <a href="#dismiss" class="statement close" onclick="dismissAlert(event, true)">Such Wow</a>
+      </div>
+    </div>
+
     <section class="walled bg1">
       <main>
         <div class="wrap">
@@ -30,7 +39,10 @@
           <h3 style="margin-bottom: 1.5em">
             The Dogecoin ecosystem platform — decentralised and grassroots, self-hosted and secure. Build the future of Dogecoin, your way.
           </h3>
-          <a class="button primary" href="#order">Such Pre-Order</a>
+          <div class="primary-button-group">
+            <a class="button primary" onclick="dismissAlert()" href="#order">Such Pre-Order</a>
+            <a class="button text small external" href="https://dogebox.dogecoin.org" target="_blank">View docs</a>
+          </div>
         </div>
       </main>
       <aside>
@@ -186,6 +198,7 @@ With Dogenet bringing these nodes together around communities of decentralised s
               The Dogecoin Runtime Environment is a secure, containerised space for services that need to access the Dogecoin network and ecosystem. Leveraging standards like Linux Namespaces and Systemd with mediated access to standard API interfaces, Dogebox creates a safe way to develop applications that you can share directly with the community, built on common APIs with pluggable providers which isolates you from upstream API changes while gaining the benefits of upstream enhancements. OR if you want to go direct and call Core APIs directly you can, the power is in your hands.
             </article>
           </div>
+          <a href="/img/5.JPG" class="more-link">View screenshots</a>
         </div>
       </main>
       <aside id="BuildGraphic"></aside>
@@ -195,7 +208,7 @@ With Dogenet bringing these nodes together around communities of decentralised s
 
     <div class="divider"></div>
 
-    <section id="order" class="centered">
+    <section id="pre-order" class="centered">
       <main>
         <div class="wrap">
           <h1 style="text-align: center">Get yours</h1>
@@ -203,6 +216,10 @@ With Dogenet bringing these nodes together around communities of decentralised s
             Dogebox dedicated hardware pre-orders opening soon.
           </h3>
           <div id="ProductRange">
+            
+            <div id="ComingSoonBanner" class="sticky-tape">
+              Pre-orders opening soon
+            </div>
 
             <product-card
               data-for="Product1" 
@@ -247,7 +264,7 @@ With Dogenet bringing these nodes together around communities of decentralised s
 
     <div class="divider or"></div>
 
-    <section class="centered">
+    <section class="centered" id="images-and-virtual-machines">
       <main>
         <div class="wrap">
           <h1>Do it your way</h1>
@@ -284,7 +301,7 @@ With Dogenet bringing these nodes together around communities of decentralised s
 
             <a href="https://dogebox.dogecoin.org/#images-and-virtual-machines" class="no-deco" target="_blank">
               <div class="grid-item">
-                <span class="title" style="background:#91a0ff">Virtual Machines</span>
+                <span class="title" style="background:#91a0ff">VM Images</span>
                 <img src="/img/diy_4.png" />
                 <span class="subtitle">Download and run images for popular virtual machine platforms</span>
                 <span class="example"></span>
@@ -292,6 +309,7 @@ With Dogenet bringing these nodes together around communities of decentralised s
             </a>
 
           </div>
+          <a href="https://dogebox.dogecoin.org/" class="more-link" style="margin-top:1em;" target="_blank">View images and documentation</a>
         </div>
       </main>
       <aside></aside>
@@ -379,6 +397,15 @@ With Dogenet bringing these nodes together around communities of decentralised s
         event.target.classList.add('selected');
         targetEl.style.backgroundImage = `url("../img/${graphic}.JPG")`;
         targetArticle.classList.add('active');
+      }
+    </script>
+    <script>
+      function dismissAlert(e, dismiss) {
+        if (dismiss) {
+          e.preventDefault();
+        }
+        var alertEl = document.getElementById("TopAlert");
+        alertEl.classList.add('tuck');
       }
     </script>
     <script>

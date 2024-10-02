@@ -1,4 +1,64 @@
 
+.top-alert {
+  width: 100%;
+  background: #00d270;
+  background: var(--color-gold);
+  color: var(--color-gold-super-dark);
+  font-family: 'Comic Neue';
+  font-weight: light;
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+  min-width: var(--global-min-width);
+
+  &.tuck {
+    transform: translateY(-100%);
+    transition: transform 300ms ease-in;
+  }
+
+  .inner {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.7em;
+
+    @media (min-width: 576px) {
+      flex-direction: row;
+    }
+    
+    .statement {
+      background: rgba(255,255,255, 0.4);
+      padding: 0.3em 1.5em;
+      border-radius: 4px;
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        background: rgba(255,255,255, 0.7);
+      }
+
+      &.close {
+        font-weight: bold;
+        align-self: flex-end;
+        background: var(--color-gold);
+        color: var(--color-gold-super-dark);
+        text-decoration: underline;
+        padding: 0.3em 0.3em;
+        align-self: flex-end;
+      }
+
+      .alert-link {
+        color: black;
+        font-family: 'Comic Neue';
+        font-weight: bold;
+        display: inline-block;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 section {
   max-width: 1200px;
   margin: 0 auto;
@@ -44,7 +104,7 @@ section.walled main {
 section.walled main .wrap {
   margin: 2em;
   @media (min-width: 576px) {
-    margin: 13em 5em;
+    margin: 10em 5em;
   }
 }
 
