@@ -1,104 +1,237 @@
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-.montserrat-black {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('/vendor/@gfont/Comic_Neue/ComicNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
-.lato-thin {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('/vendor/@gfont/Comic_Neue/ComicNeue-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
 
-.lato-light {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-black {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.lato-thin-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('/vendor/@gfont/Comic_Neue/ComicNeue-Italic.ttf') format('truetype');
+  font-weight: normal;
   font-style: italic;
 }
 
-.lato-light-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('/vendor/@gfont/Comic_Neue/ComicNeue-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
   font-style: italic;
 }
 
-.lato-regular-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.lato-bold-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.lato-black-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-.comic-neue-light {
-  font-family: "Comic Neue", cursive;
-  font-weight: 300;
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('/vendor/@gfont/Comic_Neue/ComicNeue-Light.ttf') format('truetype');
+  font-weight: 300; /* Light */
   font-style: normal;
 }
 
-.comic-neue-regular {
-  font-family: "Comic Neue", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.comic-neue-bold {
-  font-family: "Comic Neue", cursive;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.comic-neue-light-italic {
-  font-family: "Comic Neue", cursive;
-  font-weight: 300;
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('/vendor/@gfont/Comic_Neue/ComicNeue-LightItalic.ttf') format('truetype');
+  font-weight: 300; /* Light */
   font-style: italic;
 }
 
-.comic-neue-regular-italic {
-  font-family: "Comic Neue", cursive;
-  font-weight: 400;
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-BlackItalic.ttf') format('truetype');
+  font-weight: 900; /* Black */
   font-style: italic;
 }
 
-.comic-neue-bold-italic {
-  font-family: "Comic Neue", cursive;
-  font-weight: 700;
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 800; /* Extra Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800; /* Extra Bold */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+  font-weight: 200; /* Extra Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200; /* Extra Light */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-LightItalic.ttf') format('truetype');
+  font-weight: 300; /* Light */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-MediumItalic.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* Semi Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600; /* Semi Bold */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/vendor/@gfont/Montserrat/Montserrat-ThinItalic.ttf') format('truetype');
+  font-weight: 100; /* Thin */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-Black.ttf') format('truetype');
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-BlackItalic.ttf') format('truetype');
+  font-weight: 900; /* Black */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-Light.ttf') format('truetype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-LightItalic.ttf') format('truetype');
+  font-weight: 300; /* Light */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-Thin.ttf') format('truetype');
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/vendor/@gfont/Lato/Lato-ThinItalic.ttf') format('truetype');
+  font-weight: 100; /* Thin */
   font-style: italic;
 }
