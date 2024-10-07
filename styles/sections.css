@@ -145,14 +145,15 @@ section.walled aside {
   align-items: center;
   
   opacity: 0.65;
-  border-radius: 60px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   margin: 2em;
 }
 
-.bg1 aside { background-image: url("../img/2.JPG"); background-size: cover; background-position: bottom; }
-.bg2 aside { background-image: url("../img/3B.JPG"); background-size: cover; background-position: bottom; }
-.bg3 aside { background-image: url("../img/4A.JPG"); background-size: cover; }
-.bg4 aside { opacity: 0.65 !important; background-image: url("../img/5.JPG"); background-size: cover; background-position: bottom; z-index:1; }
+.bg1 aside { background-image: url("../img/2.jpg"); background-size: cover; background-position: bottom; }
+.bg2 aside { background-image: url("../img/3B.jpg"); background-size: cover; background-position: bottom; }
+.bg3 aside { background-image: url("../img/4A.jpg"); background-size: cover; }
+.bg4 aside { opacity: 0.65 !important; background-image: url("../img/5.jpg"); background-size: cover; background-position: bottom; z-index:1; }
 .bg4 div#BuildUnder {
   display: none;
   position: absolute;
@@ -319,6 +320,6 @@ section.centered {
   }
 
   &.lobster { background: var(--color-lobster); }
-  &.yellow { background: var(--color-yellow); }
-  &.green { background: var(--color-green); }
+  &.yellow { background: var(--color-yellow); color: black;  }
+  &.green { background: var(--color-green); color: black; }
 }

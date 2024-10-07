@@ -49,7 +49,7 @@ p {
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comic Neue";
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
@@ -57,7 +57,7 @@ h1 {
 }
 
 h3 {
-  font-family: "Lato", sans-serif;
+  font-family: "Comic Neue";
   font-weight: 300;
   font-style: normal;
   line-height: 1.5;
@@ -74,7 +74,7 @@ h3 {
 }
 
 .longform p {
-  font-family: "Lato", sans-serif;
+  font-family: "Comic Neue";
   font-weight: 300;
   font-style: normal;
   line-height: 1.5;
@@ -116,11 +116,12 @@ div.divider.or::after {
   text-decoration: none;
   user-select: none;
 
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comic Neue";
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   padding: 1.2em 1em;
   &.small { padding: .4em .6em; }
 
@@ -139,12 +140,12 @@ div.divider.or::after {
     &:hover { background: #470082;
     &:active { background: #8a2cd7; } }
   }
-  &.secondary { background: var(--color-lobster-super-dark);
+  &.secondary { background: var(--color-lobster-super-dark); color: #fff;
     &:hover { background: var(--color-lobster-dark);
     &:active { background: var(--color-lobster-light) } }
     &.selected { background: var(--color-lobster); border-color: var(--color-lobster); }
   }
-  &.yellow { background: var(--color-yellow-super-dark);
+  &.yellow { background: var(--color-yellow-super-dark);  color: #000; 
     &:hover { background: var(--color-yellow-dark);
     &:active { background: var(--color-yellow-light) } }
     &.selected { background: var(--color-yellow); border-color: var(--color-yellow); }
@@ -189,7 +190,7 @@ div.divider.or::after {
   gap: .5em;
   &.start { justify-content: flex-start; }
   &.center { justify-content: center; }
-  &.end { justify-content: flex-end; }
+  &.end { justify-content: flex-end; color: #000; }
 }
 
 a.more-link {
