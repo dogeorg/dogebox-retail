@@ -59,6 +59,23 @@
   }
 }
 
+.tldr {
+  color: yellow;
+  transform: rotate(-7deg) translateY(-8px);
+  display: inline-block;"
+}
+
+.timeline_img {
+  width:100%;
+  max-width: 720px;
+  margin-bottom: -3em;
+  @media (min-width: 576px) {
+    width: 90%;
+    margin-bottom: 0em;
+  }
+}
+
+
 section {
   max-width: 1200px;
   margin: 0 auto;
