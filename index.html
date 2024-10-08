@@ -1,10 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link href="vendor/fontawesome-free@6.6.0-web/css/all.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="vendor/bootstrap@5.3.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="vendor/bootstrap@5.3.3/js/bootstrap.bundle.min.js" ></script>    
+
     <link href="styles/fonts.css" rel="stylesheet" type="text/css" />
     <link href="styles/primitives.css" rel="stylesheet" type="text/css" />
     <link href="styles/sections.css" rel="stylesheet" type="text/css" />
-    <link href="styles/components.css" rel="stylesheet" type="text/css" />
+    <link href="styles/components.css" rel="stylesheet" type="text/css" />    
 
     <title>Dogebox</title>
     
@@ -17,14 +22,29 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- image preloads -->
-    <link rel="preload" href="img/3A.JPG" as="image">
-    <link rel="preload" href="img/3B.JPG" as="image">
-    <link rel="preload" href="img/3C.JPG" as="image">
-    <link rel="preload" href="img/4A.JPG" as="image">
-    <link rel="preload" href="img/4B.JPG" as="image">
-    <link rel="preload" href="img/4C.JPG" as="image">
+    <link rel="preload" href="/img/2.jpg" as="image">
+    <link rel="preload" href="/img/2S.png" as="image">
+    <link rel="preload" href="/img/2S.png" as="image">
+    <link rel="preload" href="/img/2SM.png" as="image">
 
     <meta name="theme-color" content="#319197">
+
+    <style>
+    .carousel-indicators [data-bs-target] {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #e1516c;
+      background-color: transparent;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .carousel-indicators .active {
+      background-color: #e1516c;
+      border-color: #e1516c;
+    }
+
+    </style>
 
     <!-- Fathom - simple analytics -->
     <script src="https://cdn.usefathom.com/script.js" data-site="TCCKYFLF" defer></script>
@@ -35,7 +55,7 @@
       <div class="inner">
         <a href="#images-and-virtual-machines" class="statement">Run Dogebox on your own hardware today! <span class="alert-link">Let's go</span> 🚀</a>
         <a href="#pre-order" class="statement">Hardware <strong>pre-orders</strong> opening soon 🙌</a>
-        <a href="#dismiss" class="statement close" onclick="dismissAlert(event, true)">Such Wow</a>
+        <a href="#dismiss" class="statement close" onclick="dismissAlert(event, true)">Paw Dismiss</a>
       </div>
     </div>
 
@@ -43,7 +63,7 @@
       <main>
         <div class="wrap">
           <h1>Meet<br />Dogebox</h1>
-          <h3 style="margin-bottom: 1.5em">
+          <h3 class="shadowed" style="margin-top: 1em; margin-bottom: 1em;">
             The Dogecoin ecosystem platform — decentralised and grassroots, self-hosted and secure. Build the future of Dogecoin, your way.
           </h3>
           <div class="primary-button-group">
@@ -61,61 +81,82 @@
 
     <section class="centered">
       <main>
-        <div id="ArticleRange" class="wrap longform">
-          <article data-for="Part1" class="active">
-            <p>
-              <span class="number-block">&nbsp;i&nbsp;</span>
-              <strong>What is the Dogebox project?</strong> Dogebox is a Linux server distribution and collection of custom software built specifically to meet the needs of the Dogecoin community.
-            </p>
-
-            <p>
-              The objective: to provide a decentralised platform for the development, distribution and self-hosting of software (we call them PUPs) that will bring real utility to the Dogecoin ecosystem and drive adoption.
-            </p>
-
-            <p>
-              Through this we envisage a system of inter-connected, open-source solutions that build on each other to help shift Dogecoin from ‘speculative asset’ to ‘useful means of exchange for all humanity’.
-            </p>
-          </article>
-          <article data-for="Part2" class="">
-            <p>
-              <span class="number-block">&nbsp;ii&nbsp;</span>
-              <strong>Levelling up Dogecoin development</strong>.&nbsp;
-              A major barrier to adoption has been the technical knowledge required to safely integrate Dogecoin into existing systems. Our aim is to close the gap between ‘hardcore crypto hackers‘ and everyday devs building solutions on Dogecoin.
-            </p>
-
-            <p>
-              By making a secure, deterministic platform, built on Linux, we aim to make self-hosting these services as easy as possible for everyday Dogecoin enjoyers, while also providing robust solutions for serious businesses integrating Dogecoin into their products.
-            </p>
-
-            <p>
-              A built-in decentralised marketplace of Dogecoin Services (PUPs) which can be one-click installed and configured, gives the whole community a place to experiment with new ideas and share them around a network of Shibes interconnected across the globe.
-            </p>
-          </article>
-          <article data-for="Part3">
-            <p>
-              <span class="number-block">&nbsp;iii&nbsp;</span>
-              <strong>Democratising Dogecoin</strong>
-              The importance of decentralised decision making, or ‘voting-with-your-feet’, is critical to the health of the Dogecoin network. As a decentralised network with contributions from many groups and individual developers, the Dogecoin blockchain lives and dies by network consensus.
-            </p>
-
-            <p>
-              Dogebox aims to put that ability to vote into the hands of every Dogecoin user, making it easy to switch between implementations of various features, from network, to key management, to indexing and many more, without disturbing the services layered on top.
-            </p>
-
-            <p>
-              This design decision means the Dogecoin community can try out new features and decide themselves what works best for Dogecoin, without having to ‘rebuild the universe’ on top every time, nor be beholden to a technical elite group of developers who control what people run on their node.
-            </p>
-
-            <p>Dogecoin is not Dogecoin unless we ALL have the power to determine its future.</p>
-          </article>
+        <div id="whatisDogebox" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#whatisDogebox" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#whatisDogebox" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#whatisDogebox" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="margin-bottom: 50px;">
+                  <div style="max-width: 624px; margin: auto; text-align: justify;">
+                    <article>
+                    <p>
+                      <span class="number-block">&nbsp;<i class="fa-brands fa-dochub"></i>&nbsp;</span>
+                      <strong>What is the Dogebox project?</strong><br>
+                      Dogebox is a Linux server distribution and collection of custom software built specifically to meet the needs of the Dogecoin community.
+                    </p>
+        
+                    <p>
+                      The objective: to provide a decentralised platform for the development, distribution and self-hosting of software (we call them PUPs) that will bring real utility to the Dogecoin ecosystem and drive adoption.
+                    </p>
+        
+                    <p>
+                      Through this we envisage a system of inter-connected, open-source solutions that build on each other to help shift Dogecoin from ‘speculative asset’ to ‘useful means of exchange for all humanity’.
+                    </p>
+                  </article>                    
+                  </div>
+            </div>
+            <div class="carousel-item" style="margin-bottom: 50px;">
+              <div style="max-width: 624px; margin: auto; text-align: justify;">
+                <article>
+                  <p>
+                    <span class="number-block">&nbsp;<i class="fa-solid fa-code"></i>&nbsp;</span>
+                    <strong>Levelling up Dogecoin development</strong><br>
+                    A major barrier to adoption has been the technical knowledge required to safely integrate Dogecoin into existing systems. Our aim is to close the gap between ‘hardcore crypto hackers‘ and everyday devs building solutions on Dogecoin.
+                  </p>
+      
+                  <p>
+                    By making a secure, deterministic platform, built on Linux, we aim to make self-hosting these services as easy as possible for everyday Dogecoin enjoyers, while also providing robust solutions for serious businesses integrating Dogecoin into their products.
+                  </p>
+      
+                  <p>
+                    A built-in decentralised marketplace of Dogecoin Services (PUPs) which can be one-click installed and configured, gives the whole community a place to experiment with new ideas and share them around a network of Shibes interconnected across the globe.
+                  </p>
+              </article>                    
+              </div>
+            </div>
+            <div class="carousel-item" style="margin-bottom: 50px;">
+              <div style="max-width: 624px; margin: auto; text-align: justify;">
+                <article class="active">
+                <p>
+                  <span class="number-block">&nbsp;<i class="fa-solid fa-shield-dog"></i>&nbsp;</span>
+                  <strong>Democratising Dogecoin</strong>
+                  The importance of decentralised decision making, or ‘voting-with-your-feet’, is critical to the health of the Dogecoin network. As a decentralised network with contributions from many groups and individual developers, the Dogecoin blockchain lives and dies by network consensus.
+                </p>
+    
+                <p>
+                  Dogebox aims to put that ability to vote into the hands of every Dogecoin user, making it easy to switch between implementations of various features, from network, to key management, to indexing and many more, without disturbing the services layered on top.
+                </p>
+    
+                <p>
+                  This design decision means the Dogecoin community can try out new features and decide themselves what works best for Dogecoin, without having to ‘rebuild the universe’ on top every time, nor be beholden to a technical elite group of developers who control what people run on their node.
+                </p>
+    
+                <p>Dogecoin is not Dogecoin unless we ALL have the power to determine its future.</p>
+              </article>                    
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#whatisDogebox" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#whatisDogebox" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-
-        <div id="ArticlePicker" class="picker">
-          <div id="Part1" class="dot selected"></div>
-          <div id="Part2" class="dot"></div>
-          <div id="Part3" class="dot"></div>
-        </div>
-
       </main>
     </section>
 
@@ -124,7 +165,7 @@
     <section class="centered">
       <main>
         <div class="wrap">
-          <h1><span class="tldr">tldr;</span><br>Do more with Dogecoin</h1>
+          <h1 class="spaced"><span class="tldr">tldr;</span><br>Do more with Dogecoin</h1>
           <img src="/img/timeline_v1.jpg" class="timeline_img" />
         </div>
       </main>
@@ -135,13 +176,13 @@
     <section class="walled bg2 reverse">
       <main>
         <div class="wrap">
-          <h1>Run</h1>
+          <h1>Run<i class="fa-solid fa-users-gear heading-icon run"></i></h1>
           <h3 style="margin-bottom: 1.5em">
             <strong>What can I run on my Dogebox?</strong><br>Just about anything that runs on Linux can be packaged as a Dogebox PUP, However Dogebox is more than a simple server-management tool: Dogebox provides a ‘stack’ of interconnected services and APIs that make up the DRE — Dogecoin Runtime Environment.
           </h3>
           <div id="RunButtonGroup" class="button-group end">
-            <a class="button small secondary" data-name="3C" data-target="#RunGraphic" onClick="selectGraphic(event)">Dogenet</a>
-            <a class="button small secondary selected" data-name="3B" data-target="#RunGraphic" onClick="selectGraphic(event)">Doge Runtime Environment</a>
+            <a class="button tab small secondary" data-name="3C" data-target="#RunGraphic" onClick="selectGraphic(event)"><i class="fa-solid fa-share-nodes"></i> Dogenet</a>
+            <a class="button tab small secondary selected" data-name="3B" data-target="#RunGraphic" onClick="selectGraphic(event)"><i class="fa-solid fa-gears"></i> Doge Runtime Environment</a>
           </div>
           <div class="explainer-block lobster">
             <article data-name="3C">
@@ -163,30 +204,30 @@
     <section class="walled bg3">
       <main>
         <div class="wrap">
-          <h1>Join</h1>
+          <h1><i class="fa-solid fa-people-pulling heading-icon join"></i>Join</h1>
           <h3 style="margin-bottom: 1.5em">
             The Dogecoin Community means different things to different people. However many independent communities make up Dogecoin, one thing unifying us all is the network itself.
             <br><br>
             Dogebox makes that unity explicit by letting everyone join the network, run a node, and be part of the Dogecoin experience, no more technical barriers to play.
             <br><br>
-With Dogenet bringing these nodes together around communities of decentralised services you choose to run, we can’t wait to see what the community builds, here are some ideas:
+            With Dogenet bringing these nodes together around communities of decentralised services you choose to run, we can’t wait to see what the community builds, here are some ideas:
           </h3>
           <div class="button-group start">
-            <a class="button small yellow selected" data-name="4B" data-target="#JoinGraphic" onClick="selectGraphic(event)">Shop</a>
-            <a class="button small yellow" data-name="4A" data-target="#JoinGraphic" onClick="selectGraphic(event)">Chat</a>
-            <a class="button small yellow" data-name="4C" data-target="#JoinGraphic" onClick="selectGraphic(event)">Such more</a>
+            <a class="button tab small yellow selected" data-name="4B" data-target="#JoinGraphic" onClick="selectGraphic(event)"><i class="fa-solid fa-cart-shopping"></i> Shop</a>
+            <a class="button tab small yellow" data-name="4A" data-target="#JoinGraphic" onClick="selectGraphic(event)"><i class="fa-solid fa-comments"></i> Chat</a>
+            <a class="button tab small yellow" data-name="4C" data-target="#JoinGraphic" onClick="selectGraphic(event)"><i class="fa-solid fa-angles-right"></i> Such more</a>
           </div>
           <div class="explainer-block yellow">
             <article data-name="4B" class="active">
-              <strong>Decentralised Shopping</strong>.
+              <strong><i class="fa-solid fa-cart-shopping"></i> Decentralised Shopping</strong><br>
               Dogebox opens the way for self-hosted shops where you run your own online store, list your own products, and they are shared around the network. This can lead to the creation of shopping aggregators marketplaces that list millions of products available in Dogecoin, without any central points of failure.
             </article>
             <article data-name="4A">
-              <strong>Decentralised Chat</strong>.
+              <strong><i class="fa-solid fa-comments"></i> Decentralised Chat</strong><br>
               The Dogebox network provides the perfect environment for communities to form around individual communications channels, gathered together around a decentralised discovery network.
             </article>
             <article data-name="4C">
-              <strong>What will we see next?</strong>
+              <strong><i class="fa-solid fa-angles-right"></i> What will we see next?</strong><br>
                As the platform develops, further use cases will be shaped by the community's needs and the initiatives of developers within the Dogecoin ecosystem. Exciting!
             </article>
           </div>
@@ -200,13 +241,13 @@ With Dogenet bringing these nodes together around communities of decentralised s
     <section class="walled bg4 reverse">
       <main>
         <div class="wrap">
-          <h1>Build</h1>
+          <h1>Build<i class="fa-solid fa-shapes heading-icon build"></i></h1>
           <h3 style="margin-bottom: 1.5em">
             A major goal of Dogebox is to encourage a cambrian-explosion of new software and services that leverage the Dogecoin blockchain, increasing adoption of Dogecoin as a means of exchange through growing utility as a currency for everyday use. If this sounds like you, get involved as a dev and <a style="color: mediumspringgreen;" href="https://discord.gg/VEUMWpThg9" target="_blank">join the discussion</a> on Discord.
           </h3>
           <div class="button-group end">
-            <a class="button small green" data-name="5B" data-target="#BuildGraphic" onClick="selectGraphic(event)">Deploy a Pup</a>
-            <a class="button small green selected" data-name="5" data-target="#BuildGraphic" onClick="selectGraphic(event)">Develop a Pup</a>
+            <a class="button tab small green" data-name="5B" data-target="#BuildGraphic" onClick="selectGraphic(event)" style="color: #000;" ><i class="fa-solid fa-bone"></i> Deploy a Pup</a>
+            <a class="button tab small green selected" data-name="5" data-target="#BuildGraphic" onClick="selectGraphic(event)" style="color: #000" ><i class="fa-solid fa-paw"></i> Develop a Pup</a>
           </div>
           <div class="explainer-block green">
             <article data-name="5B">
@@ -216,7 +257,7 @@ With Dogenet bringing these nodes together around communities of decentralised s
               The Dogecoin Runtime Environment is a secure, containerised space for services that need to access the Dogecoin network and ecosystem. Leveraging standards like Linux Namespaces and Systemd with mediated access to standard API interfaces, Dogebox creates a safe way to develop applications that you can share directly with the community, built on common APIs with pluggable providers which isolates you from upstream API changes while gaining the benefits of upstream enhancements. OR if you want to go direct and call Core APIs directly you can, the power is in your hands.
             </article>
           </div>
-          <a href="/img/5.JPG" class="more-link">View screenshots</a>
+          <a href="#" class="more-link" data-bs-toggle="modal" data-bs-target="#screenshotsModal"><i class="fa-solid fa-images"></i>so screenshots</a>
         </div>
       </main>
       <aside id="BuildGraphic"></aside>
@@ -224,12 +265,66 @@ With Dogenet bringing these nodes together around communities of decentralised s
       <div id="BuildUnder2"></div>
     </section>
 
+
+    <div class="modal modal-xl fade" id="screenshotsModal" tabindex="-1" aria-labelledby="screenshotsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #2f2f2f;">
+          <div class="modal-body" style="margin: auto;">
+            <button style="position:absolute; right: 15px; z-index:99;" type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div id="dogeboxScreenshots" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide-to="0" class="active" aria-current="true" aria-label="screenshot 1"></button>
+                <button type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide-to="1" aria-label="screenshot 2"></button>
+                <button type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide-to="2" aria-label="screenshot 3"></button>
+                <button type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide-to="3" aria-label="screenshot 4"></button>
+                <button type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide-to="4" aria-label="screenshot 5"></button>
+                <button type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide-to="5" aria-label="screenshot 6"></button>
+                <button type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide-to="6" aria-label="screenshot 7"></button>
+                <button type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide-to="7" aria-label="screenshot 8"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="margin-bottom: 50px;">
+                  <img src="/img/screenshot02.png" style="max-width: 100%; border-radius: 20px;" alt="Dogebox screenshot 1">
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <img src="/img/screenshot03.png" style="max-width: 100%; border-radius: 20px;" alt="Dogebox screenshot 2">
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <img src="/img/screenshot04.png" style="max-width: 100%; border-radius: 20px;" alt="Dogebox screenshot 4">
+                </div>                
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <img src="/img/screenshot05.png" style="max-width: 100%; border-radius: 20px;" alt="Dogebox screenshot 5">
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <img src="/img/screenshot06.png" style="max-width: 100%; border-radius: 20px;" alt="Dogebox screenshot 6">
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <img src="/img/screenshot07.png" style="max-width: 100%; border-radius: 20px;" alt="Dogebox screenshot 7">
+                </div>
+                <div class="carousel-item" style="margin-bottom: 50px;">
+                  <img src="/img/screenshot08.png" style="max-width: 100%; border-radius: 20px;" alt="Dogebox screenshot 8">
+                </div>                                                                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#dogeboxScreenshots" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+
     <div class="divider"></div>
 
     <section id="pre-order" class="centered">
       <main>
         <div class="wrap">
-          <h1 style="text-align: center">Get yours</h1>
+          <h1  class="spaced" style="text-align: center;">Get yours</h1>
           <h3 style="margin-bottom: 1.5em">
             We designed Dogebox to run on any hardware, but want to give eager Shibes a chance to support future development and have it all in a dedicated little box ready to go. We will offer a limited run of those Dogeboxes right here soon. <a style="color: deepskyblue;" href="https://discord.gg/VEUMWpThg9" target="_blank">Join our Discord</a> and follow us on  <a style="color: deepskyblue;" href="https://x.com/dogecoinfdn" target="_blank">𝕏</a> to stay informed!
           </h3>
@@ -285,14 +380,14 @@ With Dogenet bringing these nodes together around communities of decentralised s
     <section class="centered" id="images-and-virtual-machines">
       <main>
         <div class="wrap">
-          <h1>Do it your way</h1>
+          <h1 class="spaced">Do it your way</h1>
           <h3 style="margin-bottom: 1.5em">
             Run the fully open-source software FREE today (and forever) on your own hardware.
           </h3>
           <div id="DiyRange">
-            <a href="https://dogebox-docs.dogecoin.org/install.html#diy-installation-options" class="no-deco" target="_blank">
+            <a href="https://github.com/dogeorg/dogebox" class="no-deco" target="_blank">
               <div class="grid-item">
-                <span class="title">BYO</span>
+                <span class="title"><i class="fa-solid fa-wrench"></i>Run</span>
                 <img src="/img/diy_1.png" />
                 <span class="subtitle">Run Dogebox on your existing hardware</span>
                 <span class="example"></span>
@@ -301,25 +396,25 @@ With Dogenet bringing these nodes together around communities of decentralised s
 
             <a href="https://dogebox-docs.dogecoin.org/install.html#diy-installation-options" class="no-deco" target="_blank">
               <div class="grid-item">
-                <span class="title" style="background: var(--color-lobster);">BUY</span>
+                <span class="title" style="background: var(--color-lobster);"><i class="fa-solid fa-cart-shopping"></i>Buy</span>
                 <img src="/img/diy_2.png" />
                 <span class="subtitle">Buy compatible hardware directly, self assemble and install.</span>
                 <span class="example"></span>
               </div>
             </a>
 
-            <a href="https://dogebox-docs.dogecoin.org/install.html#diy-installation-options" class="no-deco" target="_blank">
+            <a href="https://github.com/dogeorg/dogebox/releases" class="no-deco" target="_blank">
               <div class="grid-item">
-                <span class="title" style="background: var(--color-green);">Images</span>
+                <span class="title" style="background: var(--color-green);"><i class="fa-solid fa-download"></i>Images</span>
                 <img src="/img/diy_3.png" />
                 <span class="subtitle">Download and run Dogebox images wherever and however you like</span>
                 <span class="example"></span>
               </div>
             </a>
 
-            <a href="https://dogebox-docs.dogecoin.org/install.html#diy-installation-options" class="no-deco" target="_blank">
+            <a href="https://github.com/dogeorg/dogebox/releases" class="no-deco" target="_blank">
               <div class="grid-item">
-                <span class="title" style="background:#91a0ff">VM Images</span>
+                <span class="title" style="background:#91a0ff"><i class="fa-solid fa-cloud-arrow-down"></i>VM Images</span>
                 <img src="/img/diy_4.png" />
                 <span class="subtitle">Download and run images for popular virtual machine platforms</span>
                 <span class="example"></span>
@@ -372,30 +467,6 @@ With Dogenet bringing these nodes together around communities of decentralised s
       }
     </script>
     <script>
-      const _picker = document.getElementById("ArticlePicker");
-      const _range = document.getElementById("ArticleRange");
-      const _dots = _picker.querySelectorAll(".dot");
-
-      for (dot of _dots) {
-        dot.addEventListener("click", _handleDotClick);
-      }
-
-      function _handleDotClick(e) {
-        for (dot of _dots) {
-          dot.classList.remove("selected");
-        }
-        e.target.classList.add("selected");
-        const selectedDot = e.target.id;
-
-        _range.querySelectorAll('article').forEach((card) => {
-          card.classList.remove('active');
-        });
-
-        const nextCard = _range.querySelector(`[data-for="${selectedDot}"]`);
-        nextCard.classList.add('active');
-      }
-    </script>
-    <script>
       function selectGraphic(event) {
         const graphic = event.target.getAttribute('data-name');
         const target = event.target.getAttribute('data-target');
@@ -413,7 +484,7 @@ With Dogenet bringing these nodes together around communities of decentralised s
         });
 
         event.target.classList.add('selected');
-        targetEl.style.backgroundImage = `url("../img/${graphic}.JPG")`;
+        targetEl.style.backgroundImage = `url("../img/${graphic}.jpg")`;
         targetArticle.classList.add('active');
       }
     </script>

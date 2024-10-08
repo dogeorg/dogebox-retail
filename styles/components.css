@@ -61,16 +61,16 @@
   background: #bb51e1;
   transform: rotate(-3deg) translateX(-0%);
   z-index: 98;
-  font-size: 2em;
+  font-size: 1.5em;
   color: black;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (min-width: 576px) {
-    font-size: 3em;
+    font-size: 2em;
     width: 120%;
     transform: rotate(-3deg) translateX(-10%);
   }
@@ -126,7 +126,7 @@
     gap: 1em;
     color: white;
     background: var(--color-panel-gradient);
-    max-height: 320px;
+    max-height: 360px;
 
     img { width: 80%; }
 
@@ -146,18 +146,25 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Comic Neue';
+      font-family: "Comic Neue";
     }
 
     span.title {
       padding: 10px;
       background: #ffc107;
       color: black;
-      font-family: 'Montserrat';
+      font-family: "Comic Neue";
       font-weight: 600;
       align-self: flex-start;
       width: 100%;
       box-sizing: border-box;
+      border-bottom-right-radius: 5px;
+      display: inline-block;
+
+      i {
+        margin-right: 5px;
+      }
+
       @media (min-width: 576px) {
         width: auto;
       }
@@ -179,7 +186,7 @@
       display: block;
       width: 80%;
       margin: 0 auto;
-      font-family: 'Comic Neue';
+      font-family: "Comic Neue";
       padding: .3em 1em;
       background: #111;
       border-radius: 8px;
@@ -201,4 +208,9 @@
   article { max-width: 720px; }
   article { display: none; }
   article.active { display: block; }
+}
+
+#whatisDogebox {
+  padding: 20px;
+  font-size: 1.2rem;
 }

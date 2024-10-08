@@ -29,10 +29,15 @@
     
     .statement {
       background: rgba(255,255,255, 0.4);
-      padding: 0.3em 1.5em;
+      padding: 0.3em 1em;
       border-radius: 4px;
       text-decoration: none;
       color: inherit;
+      i {
+        position: relative;
+        left: -2px;
+        bottom: -1px;
+      }
 
       &:hover {
         background: rgba(255,255,255, 0.7);
@@ -84,7 +89,7 @@ section {
 section:first-of-type {
   margin-top: 1em;
   @media (min-width: 576px) {
-    margin-top: 3em;
+    margin-top: 1em;
   }
 }
 
@@ -145,14 +150,14 @@ section.walled aside {
   align-items: center;
   
   opacity: 0.65;
-  border-radius: 60px;
+  border-radius: 20px;
   margin: 2em;
 }
 
-.bg1 aside { background-image: url("../img/2.JPG"); background-size: cover; background-position: bottom; }
-.bg2 aside { background-image: url("../img/3B.JPG"); background-size: cover; background-position: bottom; }
-.bg3 aside { background-image: url("../img/4A.JPG"); background-size: cover; }
-.bg4 aside { opacity: 0.65 !important; background-image: url("../img/5.JPG"); background-size: cover; background-position: bottom; z-index:1; }
+.bg1 aside { background-image: url("../img/2.jpg"); background-size: cover; background-position: bottom; }
+.bg2 aside { background-image: url("../img/3B.jpg"); background-size: cover; background-position: bottom; }
+.bg3 aside { background-image: url("../img/4A.jpg"); background-size: cover; }
+.bg4 aside { opacity: 0.65 !important; background-image: url("../img/5.jpg"); background-size: cover; background-position: bottom; z-index:1; }
 .bg4 div#BuildUnder {
   display: none;
   position: absolute;
@@ -199,15 +204,15 @@ section.walled aside {
   content: '';
   visibility: hidden;
   position: absolute;
-  bottom: -255px;
-  width: 500px;
-  height: 420px;
+  bottom: -30px;
+  width: 430px;
+  height: 137px;
   background-image: url('/img/2SM.png');
   background-size: 100% auto;
   background-position: bottom;
   animation: breatheReflection 4s ease-in-out infinite;
-  opacity: 0.45;
-  filter: blur(7px) brightness(0.7);
+  opacity: 0.65;
+  filter: blur(7px) brightness(0.5);
 }
 
 @media (min-width: 576px) {
@@ -307,6 +312,8 @@ section.centered {
 
 .explainer-block {
   width: 100%;
+  position: relative;
+  bottom: 1px;
   article {
     display: none;
     min-height: 100px;
@@ -318,7 +325,7 @@ section.centered {
     }
   }
 
-  &.lobster { background: var(--color-lobster); }
-  &.yellow { background: var(--color-yellow); }
-  &.green { background: var(--color-green); }
+  &.lobster { background: var(--color-lobster); color: black; }
+  &.yellow { background: var(--color-yellow); color: black;  }
+  &.green { background: var(--color-green); color: black; }
 }
