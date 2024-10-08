@@ -49,11 +49,19 @@ p {
 }
 
 h1 {
-  font-family: "Comic Neue";
+  font-family: "Montserrat";
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
   font-size: 3em;
+}
+
+h2 {
+  font-family: "Comic Neue";
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 1.18rem;
 }
 
 h3 {
@@ -62,6 +70,13 @@ h3 {
   font-style: normal;
   line-height: 1.5;
   font-size: 1.18rem;
+}
+
+h3.shadowed {
+  margin-left: -15px;
+  padding: 10px 0px 10px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 500px;
 }
 
 .longform {
@@ -120,11 +135,14 @@ div.divider.or::after {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+
   padding: 1.2em 1em;
   &.small { padding: .4em .6em; }
-
+  &.tab {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    i { pointer-events: none }
+  }
 
   &:link,
   &:visited,
@@ -136,11 +154,13 @@ div.divider.or::after {
   &:hover {
     cursor: pointer;
   }
-  &.primary { background: #6100b0;
+  &.primary { 
+    font-family: 'Montserrat';
+    background: #6100b0;
     &:hover { background: #470082;
     &:active { background: #8a2cd7; } }
   }
-  &.secondary { background: var(--color-lobster-super-dark); color: #fff;
+  &.secondary { background: var(--color-lobster-super-dark); color: #000;
     &:hover { background: var(--color-lobster-dark);
     &:active { background: var(--color-lobster-light) } }
     &.selected { background: var(--color-lobster); border-color: var(--color-lobster); }
@@ -150,13 +170,14 @@ div.divider.or::after {
     &:active { background: var(--color-yellow-light) } }
     &.selected { background: var(--color-yellow); border-color: var(--color-yellow); }
   }
-  &.green { background: var(--color-green-super-dark);
+  &.green { background: var(--color-green-super-dark); color: #000;
     &:hover { background: var(--color-green-dark);
     &:active { background: var(--color-green-light) } }
     &.selected { background: var(--color-green); border-color: var(--color-green); }
   }
 
   &.text {
+    font-family: 'Montserrat';
     background: none;
     border: 1px dashed white;
     &:hover { text-decoration: underline; }
@@ -197,6 +218,13 @@ a.more-link {
   padding: 1em;
   display: inline-block;
   color: white;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-family: 'Comic Neue';
+  i {
+    margin-right: 8px;
+  }
+}
+
+.heading-icon {
+  display: none;
 }
