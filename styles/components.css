@@ -63,7 +63,7 @@
   z-index: 98;
   font-size: 2em;
   color: black;
-  font-family: 'Montserrat';
+  font-family: "Comic Neue";
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -146,18 +146,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Comic Neue';
+      font-family: "Comic Neue";
     }
 
     span.title {
       padding: 10px;
       background: #ffc107;
       color: black;
-      font-family: 'Montserrat';
+      font-family: "Comic Neue";
       font-weight: 600;
       align-self: flex-start;
       width: 100%;
       box-sizing: border-box;
+      border-bottom-right-radius: 5px;
       @media (min-width: 576px) {
         width: auto;
       }
@@ -179,7 +180,7 @@
       display: block;
       width: 80%;
       margin: 0 auto;
-      font-family: 'Comic Neue';
+      font-family: "Comic Neue";
       padding: .3em 1em;
       background: #111;
       border-radius: 8px;
