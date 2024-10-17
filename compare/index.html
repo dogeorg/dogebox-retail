@@ -31,11 +31,15 @@
           color: #f2f2f3;
           max-width: 1800px;
           margin: 0 auto;
-          padding: 20px;
         }
         h1 {
           text-align: center;
           color: white;
+        }
+
+        hr {
+          border-top: none;
+          border-bottom: 1px solid white;
         }
         .price-comparison {
           display: flex;
@@ -43,7 +47,7 @@
           align-items: center;
           justify-content: space-around;
           gap: 20px;
-          margin-top: 3em;
+          margin-top: 8em;
           margin-bottom: 8em;
         }
         .price-option-wrap {
@@ -63,25 +67,28 @@
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
           background-color: #0d0d0d;
           font-family: "Comic Neue";
-          margin-top: 2em;
+          margin-top: 3em;
+          z-index: 99999;
 
           &.yellow {
-            border-color: yellow;
+            background-color: #dbc937;
+            border-color: #dbc937;
             margin-right: -400px;
             transform: rotate(5deg);
             .button {
-              background-color: yellow;
+              background-color: #ffeb9c;
               &:hover {
-                background-color: lightyellow;
+                background-color: #ffeb9c;
               }
             }
           }
           &.blue {
+            background-color: deepskyblue;
             border-color: deepskyblue;
             margin-left: -400px;
             transform: rotate(-5deg);
             .button {
-              background-color: deepskyblue;
+              background-color: lightblue;
               margin-left: -60px;
               &:hover {
                 background-color: lightblue;
@@ -89,13 +96,14 @@
             }
           }
           &.purple {
-            border-color: deeppink;
-            margin-right: -400px;
-            transform: rotate(5deg);
+            background-color: #a146c1;
+            border-color: #a146c1;
+            margin-right: -900px;
+            transform: rotate(5deg) translateX(180px);
             .button {
-              background-color: deeppink;
+              background-color: #ffbefc;
               &:hover {
-                background-color: #ff69b4;
+                background-color: #ffbefc;
               }
             }
           }
@@ -132,7 +140,7 @@
         }
         .price-option li::before {
           content: "✓";
-          color: #27ae60;
+          color: white;
           position: absolute;
           left: 0;
         }
@@ -142,13 +150,13 @@
           border-radius: 3px;
           font-weight: bold;
           &.yellow {
-            background-color: yellow;
+            background-color: #ffeb9c;
           }
           &.blue {
-            background-color: deepskyblue;
+            background-color: lightblue;
           }
           &.purple {
-            background-color: deeppink;
+            background-color: #ffbefc;
           }
         }
         @media (max-width: 768px) {
@@ -158,11 +166,11 @@
         }
 
         .inclusions-wrap {
-          height: 80px;
+          height: 4px;
           width: 400px;
           margin-bottom: 80px;
           &.yellow {
-            background-color: yellow;
+            background-color: #dbc937;
             margin-left: -250px;
           }
           &.blue {
@@ -170,12 +178,19 @@
             margin-right: -220px;
           }
           &.purple {
-            background-color: deeppink;
-            margin-left: -250px;
+            transform: translateX(50px);
+            background-color: #a146c1;
+            margin-left: 120px;
+            width: 610px;
           }
         }
+        area {
+          cursor: pointer;
+        }
       </style>
-      <h1>Such Option</h1>
+      <h1>Such Bundle</h1>
+      <p style="text-align: center;">Explanation .. Nisi consequat do dolore et labore voluptate nulla labore velit magna enim deserunt ut aute amet incididunt non ullamco veniam quis.</p>
+      <div style="margin: 3em 4em 2em; border-bottom: 1px solid #444;"></div>
       <div class="price-comparison">
         <div class="price-option-wrap">
           <div class="price-option yellow">
@@ -188,7 +203,16 @@
             </ul>
             <div class="button select">So click</div>
           </div>
-          <div class="inclusions-wrap yellow"></div>
+          <div class="inclusions-wrap yellow" style="position: relative; z-index: 999;">
+            <img src="/img/bundle-alt.png" usemap="#standard-image-map" style="position: absolute; bottom: 93%; right: 60px;"/>
+            <map name="standard-image-map">
+              <area href="/compare/#such-pic-dogebox" coords="219,275,219,305,271,328,362,285,362,261,307,235" shape="poly">
+              <area href="/compare/#such-pic-storage-nvme" coords="236,181,232,208,336,224,338,203,330,195" shape="poly">
+              <area href="/compare/#such-pic-memory" coords="243,164,336,148,329,123,240,139" shape="poly">
+              <area href="/compare/#such-pic-power-adaptor" coords="249,45,249,88,259,91,259,114,266,114,267,94,279,87,279,79,285,74,283,46,256,41,256,40" shape="poly">
+              <area href="/compare/#such-pic-wifi-antenna" coords="295,14,304,70,292,72,295,85,308,82,308,88,307,96,329,101,336,38,328,35,322,87,315,86,315,78,302,13" shape="poly">
+            </map>
+          </div>
         </div>
 
         <div class="price-option-wrap">
@@ -205,7 +229,18 @@
             </ul>
             <div class="button select">Much have</div>
           </div>
-          <div class="inclusions-wrap blue"></div>
+          <div class="inclusions-wrap blue" style="position: relative; z-index: 999;">
+            <img src="/img/bundle2-alt.png" usemap="#founders-image-map" style="position: absolute; bottom: 93%; left: 30px;"/>
+            <map name="founders-image-map">
+              <area target="" alt="" title="" href="#dogebox" coords="10,305,62,331,155,287,156,260,101,234,12,274" shape="poly">
+              <area target="" alt="" title="" href="#storage" coords="27,207,130,226,134,198,34,180" shape="poly">
+              <area target="" alt="" title="" href="#memory" coords="38,166,129,150,123,122,32,140" shape="poly">
+              <area target="" alt="" title="" href="#power" coords="43,46,41,86,51,91,52,113,59,115,60,92,73,87,73,76,81,73,79,47,51,39" shape="poly">
+              <area target="" alt="" title="" href="#wifi" coords="89,16,97,70,85,75,87,84,96,83,103,89,99,97,124,101,131,38,121,38,117,86,103,80,110,78,98,14,94,14" shape="poly">
+              <area target="" alt="" title="" href="#badge" coords="222,194,201,220,199,248,215,272,225,283,224,294,236,290,246,297,248,289,252,294,258,287,262,299,271,292,283,295,282,283,299,267,308,246,305,225,295,204,274,188,252,183,234,187" shape="poly">
+              <area target="" alt="" title="" href="#extra-stickers" coords="207,80,203,90,196,98,202,107,200,120,204,131,208,143,214,150,226,159,235,155,249,153,262,151,270,155,285,154,300,147,301,139,304,133,302,127,308,119,307,109,304,103,306,94,297,84,293,74,286,71,278,66,269,69,262,68,257,70,245,64,239,65,234,74,226,74,220,80" shape="poly">
+          </map>
+          </div>
         </div>
 
         <div class="price-option-wrap">
@@ -229,11 +264,82 @@
             </ul>
             <div class="button select">Such choose</div>
           </div>
-          <div class="inclusions-wrap purple"></div>
+          <div class="inclusions-wrap purple" style="position: relative; z-index: 1;">
+            <img src="/img/bundle3-alt.png" usemap="#fullb0rk-image-map" style="position: absolute; bottom: 98%; right: 40px;"/>
+            <map name="fullb0rk-image-map" style="z-index: 999;">
+              <area href="/compare/#such-pic-full-b0rk-tshirt" coords="26,244,9,279,38,298,31,359,52,364,130,361,125,291,147,279,131,251,127,242,92,228,73,232,54,229" shape="poly">
+              <area href="/compare/#such-pic-block-zero-floppy" coords="39,69,18,137,86,161,109,94" shape="poly">
+              <area href="/compare/#such-pic-temp-tattoos" coords="114,147,113,155,103,159,104,165,101,172,109,192,106,204,115,216,136,198,177,175,165,159,157,153,138,140,126,147" shape="poly">
+              <area href="/compare/#such-pic-extra-stickers" coords="224,126,222,135,215,141,220,151,218,167,225,177,227,188,232,194,238,201,250,203,256,199,268,198,281,196,293,200,309,197,319,188,322,181,323,171,331,158,324,151,326,142,318,128,314,115,305,112,296,111,276,113,263,106,252,117,238,123" shape="poly">
+              <area href="/compare/#such-pic-digital-founders-badge" coords="232,248,219,274,220,295,229,313,244,326,242,337,254,336,264,341,268,334,273,339,277,331,279,341,288,335,301,337,299,326,316,311,328,291,325,270,315,249,298,235,277,226,259,229,243,238" shape="poly">
+              <area href="/compare/#such-pic-dogebox" coords="418,318,417,347,471,375,562,331,562,304,509,278" shape="poly">
+              <area href="/compare/#such-pic-storage-nvme" coords="439,224,434,252,534,271,542,242,439,225" shape="poly">
+              <area href="/compare/#such-pic-memory" coords="441,207,536,190,531,165,439,182" shape="poly">
+              <area href="/compare/#such-pic-power-adaptor" coords="448,92,447,131,455,136,459,158,465,159,465,142,477,133,479,122,484,119,484,88,458,84" shape="poly">
+              <area href="/compare/#such-pic-wifi-antenna" coords="496,60,503,114,491,118,493,128,514,126,522,133,510,132,506,141,528,144,536,81,527,81,523,124,515,118,504,58" shape="poly">
+            </map>
+          </div>
         </div>
       </div>
     </div>
     <site-footer></site-footer>
     <script type="module" src="/components/site-footer.js"></script>
+<!doctype html>
+<html lang="en">
+  <!-- ... (previous head and body content remains the same) ... -->
+  <body>
+    <!-- ... (previous body content remains the same) ... -->
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mapConfigs = [
+          { mapName: 'standard-image-map', color: 'rgba(255, 255, 224, 0.3)' }, // Soft yellow
+          { mapName: 'founders-image-map', color: 'rgba(173, 216, 230, 0.3)' }, // Soft blue
+          { mapName: 'fullb0rk-image-map', color: 'rgba(128, 0, 128, 0.3)' }    // Soft purple
+        ];
+
+        mapConfigs.forEach(config => {
+          const map = document.querySelector(`map[name="${config.mapName}"]`);
+          const img = document.querySelector(`img[usemap="#${config.mapName}"]`);
+          const container = img.parentElement;
+
+          // Get the image's position relative to its container
+          const imgRect = img.getBoundingClientRect();
+          const containerRect = container.getBoundingClientRect();
+          const imgTop = imgRect.top - containerRect.top;
+          const imgLeft = imgRect.left - containerRect.left;
+
+          map.querySelectorAll('area[shape="poly"]').forEach(area => {
+            const coords = area.getAttribute('coords').split(',').map(Number);
+            const highlight = document.createElement('canvas');
+            highlight.width = img.width;
+            highlight.height = img.height;
+            highlight.style.position = 'absolute';
+            highlight.style.left = `${imgLeft}px`;
+            highlight.style.top = `${imgTop}px`;
+            highlight.style.pointerEvents = 'none';
+            highlight.style.opacity = '0';
+            highlight.style.transition = 'opacity 0.3s';
+            
+            const ctx = highlight.getContext('2d');
+            ctx.fillStyle = config.color;
+            ctx.beginPath();
+            ctx.moveTo(coords[0], coords[1]);
+            for (let i = 2; i < coords.length; i += 2) {
+              ctx.lineTo(coords[i], coords[i + 1]);
+            }
+            ctx.closePath();
+            ctx.fill();
+
+            container.appendChild(highlight);
+
+            area.addEventListener('mouseover', () => highlight.style.opacity = '1');
+            area.addEventListener('mouseout', () => highlight.style.opacity = '0');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
   </body>
 </html>
