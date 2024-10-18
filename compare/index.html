@@ -24,175 +24,12 @@
   </head>
   <body>
     <div class="page">
-      <style>
-        body {
-          font-family: Arial, sans-serif;
-          line-height: 1.6;
-          color: #f2f2f3;
-          max-width: 1800px;
-          margin: 0 auto;
-        }
-        h1 {
-          text-align: center;
-          color: white;
-        }
 
-        hr {
-          border-top: none;
-          border-bottom: 1px solid white;
-        }
-        .price-comparison {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-around;
-          gap: 20px;
-          margin-top: 8em;
-          margin-bottom: 8em;
-        }
-        .price-option-wrap {
-          display: flex;
-          flex-direction: row;
-          align-items: flex-end;
-        }
-        .price-option {
-          font-size: 1.1rem;
-          display: block;
-          flex: 1;
-          min-width: 250px;
-          max-width: 350px;
-          border: 3px solid #ddd;
-          border-radius: 8px;
-          padding: 20px;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          background-color: #0d0d0d;
-          font-family: "Comic Neue";
-          margin-top: 3em;
-          z-index: 99999;
-
-          &.yellow {
-            background-color: #dbc937;
-            border-color: #dbc937;
-            margin-right: -400px;
-            transform: rotate(5deg);
-            .button {
-              background-color: #ffeb9c;
-              &:hover {
-                background-color: #ffeb9c;
-              }
-            }
-          }
-          &.blue {
-            background-color: deepskyblue;
-            border-color: deepskyblue;
-            margin-left: -400px;
-            transform: rotate(-5deg);
-            .button {
-              background-color: lightblue;
-              margin-left: -60px;
-              &:hover {
-                background-color: lightblue;
-              }
-            }
-          }
-          &.purple {
-            background-color: #a146c1;
-            border-color: #a146c1;
-            margin-right: -900px;
-            transform: rotate(5deg) translateX(180px);
-            .button {
-              background-color: #ffbefc;
-              &:hover {
-                background-color: #ffbefc;
-              }
-            }
-          }
-
-          .button {
-            width: 90%;
-            text-align: center;
-            color: black;
-            font-size: 1.6em;
-            font-family: "Comic Neue";
-            padding: 0.5em 1.5em;
-            &:hover {
-              cursor: pointer;
-            }
-          }
-        }
-        .price-option h2 {
-          font-family: "Montserrat";
-          font-weight: 700;
-          text-align: center;
-          color: #f2f2f3;
-          margin-top: 0;
-          margin-bottom: 0.5rem;
-          font-size: 2rem;
-        }
-        .price-option ul {
-          list-style-type: none;
-          padding: 0;
-        }
-        .price-option li {
-          margin-bottom: 10px;
-          padding-left: 20px;
-          position: relative;
-        }
-        .price-option li::before {
-          content: "✓";
-          color: white;
-          position: absolute;
-          left: 0;
-        }
-        .highlight {
-          color: black;
-          padding: 2px 5px;
-          border-radius: 3px;
-          font-weight: bold;
-          &.yellow {
-            background-color: #ffeb9c;
-          }
-          &.blue {
-            background-color: lightblue;
-          }
-          &.purple {
-            background-color: #ffbefc;
-          }
-        }
-        @media (max-width: 768px) {
-          .price-option {
-            flex-basis: 100%;
-          }
-        }
-
-        .inclusions-wrap {
-          height: 4px;
-          width: 400px;
-          margin-bottom: 80px;
-          &.yellow {
-            background-color: #dbc937;
-            margin-left: -250px;
-          }
-          &.blue {
-            background-color: deepskyblue;
-            margin-right: -220px;
-          }
-          &.purple {
-            transform: translateX(50px);
-            background-color: #a146c1;
-            margin-left: 120px;
-            width: 610px;
-          }
-        }
-        area {
-          cursor: pointer;
-        }
-      </style>
       <h1>Such Bundle</h1>
       <p style="text-align: center;">Explanation .. Nisi consequat do dolore et labore voluptate nulla labore velit magna enim deserunt ut aute amet incididunt non ullamco veniam quis.</p>
       <div style="margin: 3em 4em 2em; border-bottom: 1px solid #444;"></div>
       <div class="price-comparison">
-        <div class="price-option-wrap">
+        <div class="price-option-wrap reverse">
           <div class="price-option yellow">
             <h2>Standard</h2>
             <ul>
@@ -204,7 +41,7 @@
             <div class="button select">So click</div>
           </div>
           <div class="inclusions-wrap yellow" style="position: relative; z-index: 999;">
-            <img src="/img/bundle-alt.png" usemap="#standard-image-map" style="position: absolute; bottom: 93%; right: 60px;"/>
+            <img src="/img/bundle-alt.png" usemap="#standard-image-map" />
             <map name="standard-image-map">
               <area href="/compare/#such-pic-dogebox" coords="219,275,219,305,271,328,362,285,362,261,307,235" shape="poly">
               <area href="/compare/#such-pic-storage-nvme" coords="236,181,232,208,336,224,338,203,330,195" shape="poly">
@@ -230,7 +67,7 @@
             <div class="button select">Much have</div>
           </div>
           <div class="inclusions-wrap blue" style="position: relative; z-index: 999;">
-            <img src="/img/bundle2-alt.png" usemap="#founders-image-map" style="position: absolute; bottom: 93%; left: 30px;"/>
+            <img src="/img/bundle2-alt.png" usemap="#founders-image-map"/>
             <map name="founders-image-map">
               <area target="" alt="" title="" href="#dogebox" coords="10,305,62,331,155,287,156,260,101,234,12,274" shape="poly">
               <area target="" alt="" title="" href="#storage" coords="27,207,130,226,134,198,34,180" shape="poly">
@@ -243,7 +80,7 @@
           </div>
         </div>
 
-        <div class="price-option-wrap">
+        <div class="price-option-wrap reverse purple">
           <div class="price-option purple">
             <h2>
               Full B<span class="bork-zero">0</span
@@ -265,7 +102,7 @@
             <div class="button select">Such choose</div>
           </div>
           <div class="inclusions-wrap purple" style="position: relative; z-index: 1;">
-            <img src="/img/bundle3-alt.png" usemap="#fullb0rk-image-map" style="position: absolute; bottom: 98%; right: 40px;"/>
+            <img src="/img/bundle3-alt.png" usemap="#fullb0rk-image-map"/>
             <map name="fullb0rk-image-map" style="z-index: 999;">
               <area href="/compare/#such-pic-full-b0rk-tshirt" coords="26,244,9,279,38,298,31,359,52,364,130,361,125,291,147,279,131,251,127,242,92,228,73,232,54,229" shape="poly">
               <area href="/compare/#such-pic-block-zero-floppy" coords="39,69,18,137,86,161,109,94" shape="poly">
