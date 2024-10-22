@@ -1,3 +1,7 @@
+*, ::after, ::before {
+  box-sizing: content-box !important;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -45,24 +49,26 @@ hr {
   }
 }
 .price-option {
+  box-sizing: content-box;
   font-size: 1.1rem;
   display: block;
   flex: 1;
   min-width: 250px;
   max-width: 350px;
   border: 3px solid #ddd;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #0d0d0d;
   font-family: "Comic Neue";
   margin-top: 3em;
-  z-index: 99999;
+  z-index: 9;
 
   &.yellow {
     background-color: #ecb81e;
     border-color: #ecb81e;
     transform: rotate(3deg);
+    min-height: 303px;
     .button {
       background-color: #ffeb9c;
       &:hover {
@@ -173,6 +179,10 @@ hr {
     &.blue { color: skyblue }
     &.purple { color: #ffbefc }
   }
+  .spec-link.twisted {
+    top: -10px;
+    margin-bottom: 20px;
+  }
 }
 area {
   cursor: pointer;
@@ -211,4 +221,27 @@ area {
   font-size:0.8rem;
   color: #222;
   text-transform: uppercase;
+}
+
+/* Carousel */
+.carousel-item {
+  margin-bottom: 50px;
+}
+
+.carousel-item img {
+  max-width: 100%; 
+  border-radius: 20px;
+}
+
+.mobile-only {
+  display: block !important;
+  @media (min-width: 576px) {
+    display: none !important;
+  }
+}
+.desktop-only {
+  display: none !important;
+  @media (min-width: 576px) {
+    display: block !important;
+  }
 }

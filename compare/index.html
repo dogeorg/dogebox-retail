@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <base href="../" />
+    <link href="vendor/fontawesome-free@6.6.0-web/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/bootstrap@5.3.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="vendor/bootstrap@5.3.3/js/bootstrap.bundle.min.js" ></script>    
+
     <link href="/styles/fonts.css" rel="stylesheet" type="text/css" />
     <link href="/styles/primitives.css" rel="stylesheet" type="text/css" />
     <link href="/compare/compare-styles.css" rel="stylesheet" type="text/css" />
@@ -48,6 +52,7 @@
             </div>
           </div>
           <div class="inclusions-wrap yellow">
+            <a class="spec-link yellow mobile-only twisted" href="#" data-bs-toggle="modal" data-bs-target="#bundleStandardModal">View full specification and gallery</a>
             <img src="/img/bundle-alt.png" usemap="#standard-image-map" />
             <map name="standard-image-map">
               <area href="/compare/#such-pic-dogebox" coords="219,275,219,305,271,328,362,285,362,261,307,235" shape="poly">
@@ -56,7 +61,7 @@
               <area href="/compare/#such-pic-power-adaptor" coords="249,45,249,88,259,91,259,114,266,114,267,94,279,87,279,79,285,74,283,46,256,41,256,40" shape="poly">
               <area href="/compare/#such-pic-wifi-antenna" coords="295,14,304,70,292,72,295,85,308,82,308,88,307,96,329,101,336,38,328,35,322,87,315,86,315,78,302,13" shape="poly">
             </map>
-            <a class="spec-link yellow" href="#">View full specification and gallery</a>
+            <a class="spec-link yellow desktop-only" href="#" data-bs-toggle="modal" data-bs-target="#bundleStandardModal">View full specification and gallery</a>
           </div>
         </div>
 
@@ -82,17 +87,28 @@
             </div>
           </div>
           <div class="inclusions-wrap blue">
-            <img src="/img/bundle2-alt.png" usemap="#founders-image-map"/>
-            <map name="founders-image-map">
-              <area target="" alt="" title="" href="#dogebox" coords="10,305,62,331,155,287,156,260,101,234,12,274" shape="poly">
-              <area target="" alt="" title="" href="#storage" coords="27,207,130,226,134,198,34,180" shape="poly">
-              <area target="" alt="" title="" href="#memory" coords="38,166,129,150,123,122,32,140" shape="poly">
-              <area target="" alt="" title="" href="#power" coords="43,46,41,86,51,91,52,113,59,115,60,92,73,87,73,76,81,73,79,47,51,39" shape="poly">
-              <area target="" alt="" title="" href="#wifi" coords="89,16,97,70,85,75,87,84,96,83,103,89,99,97,124,101,131,38,121,38,117,86,103,80,110,78,98,14,94,14" shape="poly">
-              <area target="" alt="" title="" href="#badge" coords="222,194,201,220,199,248,215,272,225,283,224,294,236,290,246,297,248,289,252,294,258,287,262,299,271,292,283,295,282,283,299,267,308,246,305,225,295,204,274,188,252,183,234,187" shape="poly">
-              <area target="" alt="" title="" href="#extra-stickers" coords="207,80,203,90,196,98,202,107,200,120,204,131,208,143,214,150,226,159,235,155,249,153,262,151,270,155,285,154,300,147,301,139,304,133,302,127,308,119,307,109,304,103,306,94,297,84,293,74,286,71,278,66,269,69,262,68,257,70,245,64,239,65,234,74,226,74,220,80" shape="poly">
+            <a class="spec-link blue mobile-only twisted" href="#">View full specification and gallery</a>
+            <img src="/img/bundle2-alt-mobile.png" class="mobile-only" usemap="#founders-image-map-mobile"/>
+            <img src="/img/bundle2-alt.png" class="desktop-only" usemap="#founders-image-map"/>
+            <map name="founders-image-map" class="desktop-only">
+              <area href="#dogebox" coords="10,305,62,331,155,287,156,260,101,234,12,274" shape="poly">
+              <area href="#storage" coords="27,207,130,226,134,198,34,180" shape="poly">
+              <area href="#memory" coords="38,166,129,150,123,122,32,140" shape="poly">
+              <area href="#power" coords="43,46,41,86,51,91,52,113,59,115,60,92,73,87,73,76,81,73,79,47,51,39" shape="poly">
+              <area href="#wifi" coords="89,16,97,70,85,75,87,84,96,83,103,89,99,97,124,101,131,38,121,38,117,86,103,80,110,78,98,14,94,14" shape="poly">
+              <area href="#badge" coords="222,194,201,220,199,248,215,272,225,283,224,294,236,290,246,297,248,289,252,294,258,287,262,299,271,292,283,295,282,283,299,267,308,246,305,225,295,204,274,188,252,183,234,187" shape="poly">
+              <area href="#extra-stickers" coords="207,80,203,90,196,98,202,107,200,120,204,131,208,143,214,150,226,159,235,155,249,153,262,151,270,155,285,154,300,147,301,139,304,133,302,127,308,119,307,109,304,103,306,94,297,84,293,74,286,71,278,66,269,69,262,68,257,70,245,64,239,65,234,74,226,74,220,80" shape="poly">
           </map>
-          <a class="spec-link blue" href="#">View full specification and gallery</a>
+          <map name="founders-image-map-mobile" class="mobile-only">
+            <area href="#foo" coords="153,37,148,47,139,46,136,52,125,52,119,59,113,66,114,74,118,81,114,86,114,96,119,104,122,112,128,121,132,130,145,130,149,126,163,123,177,124,185,126,198,127,206,124,214,118,214,111,220,107,215,100,221,92,222,83,218,77,218,65,213,58,206,44,198,41,183,41,175,42,166,39" shape="poly">
+            <area href="#bar" coords="168,155,161,155,154,154,151,159,145,160,141,165,134,169,127,178,120,184,120,193,117,200,115,215,118,223,121,234,129,245,138,252,140,264,152,263,161,269,165,260,168,267,174,260,177,271,185,263,200,267,196,252,205,251,210,242,218,231,223,216,222,200,214,185,206,174,194,164,182,157,175,154" shape="poly">
+            <area href="#baz" coords="126,347,128,385,137,390,138,413,144,416,145,393,157,386,157,376,162,372,161,347,141,341,134,340" shape="poly">
+            <area href="#bim" coords="181,312,175,314,184,371,170,375,171,383,191,380,197,389,187,388,186,396,207,400,214,339,206,337,202,383,193,375,192,370,193,375" shape="poly">
+            <area href="#bom" coords="118,439,122,464,214,448,207,422" shape="poly">
+            <area href="#bat" coords="118,481,115,488,117,499,111,505,214,523,218,501,208,495" shape="poly">
+            <area href="#dit" coords="187,535,97,572,96,579,96,604,150,630,239,587,238,558" shape="poly">
+          </map>
+          <a class="spec-link blue desktop-only" href="#">View full specification and gallery</a>
           </div>
         </div>
 
@@ -125,8 +141,10 @@
             </div>
           </div>
           <div class="inclusions-wrap purple">
-            <img src="/img/bundle3-alt.png" usemap="#fullb0rk-image-map"/>
-            <map name="fullb0rk-image-map" style="z-index: 999;">
+            <a class="spec-link purple mobile-only twisted" href="#">View full specification and gallery</a>
+            <img src="/img/bundle3-alt-mobile.png" class="mobile-only" usemap="#fullb0rk-image-map-mobile"/>
+            <img src="/img/bundle3-alt.png" class="desktop-only" usemap="#fullb0rk-image-map"/>
+            <map name="fullb0rk-image-map" style="z-index: 999;" class="desktop-only">
               <area href="/compare/#such-pic-full-b0rk-tshirt" coords="26,244,9,279,38,298,31,359,52,364,130,361,125,291,147,279,131,251,127,242,92,228,73,232,54,229" shape="poly">
               <area href="/compare/#such-pic-block-zero-floppy" coords="39,69,18,137,86,161,109,94" shape="poly">
               <area href="/compare/#such-pic-temp-tattoos" coords="114,147,113,155,103,159,104,165,101,172,109,192,106,204,115,216,136,198,177,175,165,159,157,153,138,140,126,147" shape="poly">
@@ -138,20 +156,88 @@
               <area href="/compare/#such-pic-power-adaptor" coords="448,92,447,131,455,136,459,158,465,159,465,142,477,133,479,122,484,119,484,88,458,84" shape="poly">
               <area href="/compare/#such-pic-wifi-antenna" coords="496,60,503,114,491,118,493,128,514,126,522,133,510,132,506,141,528,144,536,81,527,81,523,124,515,118,504,58" shape="poly">
             </map>
-            <a class="spec-link purple" href="#">View full specification and gallery</a>
+            <map name="fullb0rk-image-map-mobile" class="mobile-only">
+              <area target="" alt="" title="" href="#foo" coords="117,77,99,137,163,159,185,97,124,73" shape="poly">
+              <area target="" alt="" title="" href="#foo" coords="180,174,190,194,183,205,193,215,219,197,250,178,241,158,225,148,215,142,208,147,195,146,192,153,184,157,184,165" shape="poly">
+              <area target="" alt="" title="" href="#foo" coords="108,243,89,277,114,297,118,293,115,334,112,360,131,365,162,365,204,362,201,294,225,278,216,266,202,244,167,231,153,233,133,232" shape="poly">
+              <area target="" alt="" title="" href="#foo" coords="150,430,139,443,131,441,127,446,116,448,112,457,106,465,111,474,107,484,110,494,114,503,121,515,128,523,138,525,143,519,152,519,161,518,171,516,183,521,199,519,208,511,210,504,213,497,210,492,216,486,217,479,211,472,212,461,205,451,201,438,194,437,185,432,176,436,167,436,159,434" shape="poly">
+              <area target="" alt="" title="" href="#foo" coords="163,548,148,550,136,558,117,572,109,595,108,611,111,622,117,633,126,641,133,648,131,658,143,656,152,666,156,657,161,661,166,655,171,665,177,655,192,661,188,649,199,640,212,627,214,611,214,596,210,582,199,569,190,559,175,552" shape="poly">
+              <area target="" alt="" title="" href="#foo" coords="154,785,139,783,127,783,120,790,121,825,131,831,132,853,136,852,138,831,148,829,152,823,151,816,155,814" shape="poly">
+              <area target="" alt="" title="" href="#foo" coords="173,822,188,817,175,753,167,753,178,809,163,814,177,823,182,828,179,836,201,839,208,778,201,776,195,827,173,822" shape="poly">
+              <area target="" alt="" title="" href="#foo" coords="113,877,116,904,206,888,201,862" shape="poly">
+              <area target="" alt="" title="" href="#foo" coords="112,921,109,928,113,935,107,939,107,946,196,966,199,961,207,963,212,940,199,935" shape="poly">
+              <area target="" alt="" title="" href="#dogebox" coords="179,975,91,1014,91,1043,137,1067,147,1068,232,1025,233,1000,226,995" shape="poly">
+          </map>
+            <a class="spec-link purple desktop-only" href="#">View full specification and gallery</a>
           </div>
         </div>
       </div>
     </div>
     <site-footer></site-footer>
+
+    <div class="modal modal-xl fade" id="bundleStandardModal" tabindex="-1" aria-labelledby="bundleStandardModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #2f2f2f;">
+          <div class="modal-body" style="margin: auto;">
+            <button style="position:absolute; right: 15px; z-index:99;" type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div id="dogeboxBundleCaro" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#dogeboxBundleCaro" data-bs-slide-to="0" class="active" aria-current="true" aria-label="screenshot 1"></button>
+                <button type="button" data-bs-target="#dogeboxBundleCaro" data-bs-slide-to="1" aria-label="screenshot 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/img/screenshot02.png">
+                </div>
+                <div class="carousel-item">
+                  <img src="/img/screenshot03.png">
+                </div>                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#dogeboxBundleCaro" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#dogeboxBundleCaro" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/components/site-footer.js"></script>
     
     <script>
+      function debounce(func, delay) {
+        let timeoutId;
+        return function (...args) {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => func.apply(this, args), delay);
+        };
+      }
+      const debouncedHandleResize = debounce(() => {
+        removeAllHoverHighlights();
+        decorateMapWithHoverHighlights();
+      }, 300);
+
       document.addEventListener('DOMContentLoaded', function() {
+        decorateMapWithHoverHighlights();
+      })
+      window.addEventListener('resize', debouncedHandleResize);
+
+      function removeAllHoverHighlights() {
+        const canvasElements = document.querySelectorAll('canvas');
+        canvasElements.forEach(canvas => canvas.remove());
+      }
+      
+      function decorateMapWithHoverHighlights() {
         const mapConfigs = [
           { mapName: 'standard-image-map', color: 'rgba(255, 255, 224, 0.3)' }, // Soft yellow
-          { mapName: 'founders-image-map', color: 'rgba(173, 216, 230, 0.3)' }, // Soft blue
-          { mapName: 'fullb0rk-image-map', color: 'rgba(128, 0, 128, 0.3)' }    // Soft purple
+          { mapName: 'founders-image-map', color: 'rgba(173, 216, 230, 0.5)' }, // Soft blue
+          { mapName: 'founders-image-map-mobile', color: 'rgba(173, 216, 230, 0.3)' }, // Soft blue
+          { mapName: 'fullb0rk-image-map', color: 'rgba(128, 0, 128, 0.3)' },    // Soft purple
+          { mapName: 'fullb0rk-image-map-mobile', color: 'rgba(128, 0, 128, 0.3)' }    // Soft purple
         ];
 
         mapConfigs.forEach(config => {
@@ -175,7 +261,7 @@
             highlight.style.top = `${imgTop}px`;
             highlight.style.pointerEvents = 'none';
             highlight.style.opacity = '0';
-            highlight.style.transition = 'opacity 0.3s';
+            highlight.style.transition = 'opacity 0.2s';
             
             const ctx = highlight.getContext('2d');
             ctx.fillStyle = config.color;
@@ -193,7 +279,7 @@
             area.addEventListener('mouseout', () => highlight.style.opacity = '0');
           });
         });
-      });
+      }
     </script>
   </body>
 </html>
