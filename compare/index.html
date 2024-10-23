@@ -207,7 +207,7 @@
       </div>
     </div>
     <script type="module" src="/components/site-footer.js"></script>
-    
+
     <script>
       function debounce(func, delay) {
         let timeoutId;
@@ -230,7 +230,7 @@
         const canvasElements = document.querySelectorAll('canvas');
         canvasElements.forEach(canvas => canvas.remove());
       }
-      
+
       function decorateMapWithHoverHighlights() {
         const mapConfigs = [
           { mapName: 'standard-image-map', color: 'rgba(255, 255, 224, 0.3)' }, // Soft yellow
@@ -262,7 +262,7 @@
             highlight.style.pointerEvents = 'none';
             highlight.style.opacity = '0';
             highlight.style.transition = 'opacity 0.2s';
-            
+
             const ctx = highlight.getContext('2d');
             ctx.fillStyle = config.color;
             ctx.beginPath();
